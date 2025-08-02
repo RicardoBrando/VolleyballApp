@@ -12,13 +12,12 @@ endif()
 project ("VolleyballApp")
 
 # Add source to this project's executable.
-add_executable (VolleyballApp "VolleyballApp.cpp" "VolleyballApp.h")
-
-find_package(SDL3 CONFIG REQUIRED)
-target_link_libraries(VolleyballApp PRIVATE SDL3::SDL3)
+add_executable (VolleyballApp "src/Main.cpp"  "src/Set.cpp" "include/Set.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET VolleyballApp PROPERTY CXX_STANDARD 23)
 endif()
 
 # TODO: Add tests and install targets if needed.
+find_package(SDL3 CONFIG REQUIRED)
+target_link_libraries(VolleyballApp PRIVATE SDL3::SDL3)
