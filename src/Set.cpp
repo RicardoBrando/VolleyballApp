@@ -40,7 +40,7 @@ Set::~Set(void)
 //--
 void Set::SetScore1(int s1)
 {
-
+	
 }
 
 //--
@@ -52,13 +52,13 @@ void Set::SetScore2(int s2)
 //--
 int Set::GetScore1()
 {
-	return m_TeamScore1[m_Index];
+	return m_CurrentScore1;
 }
 
 //--
 int Set::GetScore2()
 {
-	return m_TeamScore2[m_Index];
+	return m_CurrentScore2;
 }
 
 //--

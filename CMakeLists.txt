@@ -12,7 +12,7 @@ endif()
 project ("VolleyballApp")
 
 # Add source to this project's executable.
-add_executable (VolleyballApp "src/Main.cpp"  "src/Set.cpp" "include/Set.h")
+add_executable (VolleyballApp "src/Main.cpp"  "src/Set.cpp" "include/Set.h" "src/Team.cpp" "include/Person.h" "src/Person.cpp" "src/Player.cpp" "include/Player.h" "test/Test.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET VolleyballApp PROPERTY CXX_STANDARD 23)
