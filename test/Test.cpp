@@ -3,6 +3,7 @@
 
 //#include "../include/Person.h"
 #include "../include/Player.h"
+#include "../include/Team.h"
 #include "../include/Set.h"
 
 class Test
@@ -49,7 +50,35 @@ public:
 
 	static void TeamTest()
 	{
+		Person pe1 = Person("Henry", "PodBeurre");
+		Person pe2 = Person("Ronronne", "Presley");
+		Person pe3 = Person("Hermine", "Banger");
+		Player p1 = Player(pe1, 15, "S");
+		Player p2 = Player(pe2, 53, "MB");
+		Player p3 = Player(pe3, 2, "L");
 
+		Team t = Team();
+		t.AddPlayer(p1);
+		t.AddPlayer(p2);
+		t.AddPlayer(p3);
+
+		vector<Player> players = t.GetPlayers();
+
+		cout << "Tous les joueurs :" << endl;
+		cout << t << endl;
+
+		cout << "Le 1er : " << t.GetPlayer(0) << endl;
+
+		t.SetCoach(Person("Cassius", "Underground"));
+		cout << "Le coach : " << t.GetCoach() << endl;
+
+		cout << "On vire Henry !\n L'equipe :" << endl;
+		t.DeletePlayer(0);
+		cout << t << endl;
+
+		cout << "On vire tout le monde !\n L'equipe :" << endl;
+		t.Clear();
+		cout << t << endl;
 	}
 
 	static void SetTest()

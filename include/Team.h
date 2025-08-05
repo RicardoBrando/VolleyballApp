@@ -12,22 +12,28 @@ using namespace std;
 
 class Team
 {
-	friend ostream& operator<<(ostream& os, const Team& S);
+	friend ostream& operator<<(ostream& os, const Team& t);
 
 public:
 
 	// Constructor
 	Team(void);
-	Team(const vector<Player> players, const string coach="");
+	Team(const vector<Player> players, const string coach = "");
 	Team(const Team& t);
 	Team& operator=(const Team& t);
 	virtual ~Team(void);
 
 	// Accessors
-	
+	vector<Player> GetPlayers();
+	Player GetPlayer(int index);
+	Person GetCoach();
+	void SetCoach(Person c);
 
 	// Methods
-	
+	void AddPlayer(Player p);
+	void DeletePlayer(int index);
+	void Clear();
+
 
 private:
 
